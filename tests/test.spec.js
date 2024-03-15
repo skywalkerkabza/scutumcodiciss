@@ -19,7 +19,7 @@ test.describe('Codicis Website Tests', () => {
   test('Showcase section is visible with correct text', async () => {
     await expect(page.locator('header#showcase')).toBeVisible();
     await expect(page.locator('header#showcase')).toContainText('Elevate Your Software\'s Integrity');
-    await expect(page.locator('header#showcase')).toContainText('Scutum Codicis(Shield of the Code) ensures');
+    await expect(page.locator('header#showcase')).toContainText('Codicis ensures');
   });
 
   test('What We Do section is visible with correct content', async () => {
