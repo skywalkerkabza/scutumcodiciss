@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Scutum Codicis Website Tests', () => {
+test.describe('Codicis Website Tests', () => {
   let page;
 
   test.beforeEach(async ({ browser }) => {
@@ -32,10 +32,10 @@ test.describe('Scutum Codicis Website Tests', () => {
   test('Main Website Test', async () => {
     // Verify Page Title
     const pageTitle = await page.title();
-    expect(pageTitle).toBe('Scutum Codicis Pty(LTD) | Software Testing for Finance & Banking');
+    expect(pageTitle).toBe('Codicis Pty(LTD) | Software Testing for Finance & Banking');
 
     // Click "Elevate Your Software's Integrity" button
-    await page.locator('text=Elevate Your Software\'s Integrity Scutum Codicis(Shield of the Code) ensures').click();
+    await page.locator('text=Elevate Your Software\'s Integrity Codicis ensures').click();
 
     // Assert "What We Do" heading text
     const whatWeDoHeading = await page.locator('.l-heading');
@@ -69,7 +69,7 @@ test.describe('Scutum Codicis Website Tests', () => {
 
   test('Footer is visible with correct copyright information', async () => {
     await expect(page.locator('footer.main-footer')).toBeVisible();
-    await expect(page.locator('footer.main-footer')).toContainText('2024 Scutum Codicis Pty(LTD). All Rights Reserved');
+    await expect(page.locator('footer.main-footer')).toContainText('2024 Codicis Pty(LTD). All Rights Reserved');
   });
 
   test.afterEach(async () => {
