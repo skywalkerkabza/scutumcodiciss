@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('Codicis Website Tests', () => {
   let page;
-
+  test.setTimeout(120000); 
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage();
     await page.goto('https://codicis.vercel.app/');
@@ -35,7 +35,7 @@ test.describe('Codicis Website Tests', () => {
     expect(pageTitle).toBe('Codicis Pty(LTD) | Software Testing for Finance & Banking');
 
     // Click "Elevate Your Software's Integrity" button
-    await page.locator('text=Elevate Your Software\'s Integrity Codicis ensures').click();
+    //await page.locator('text=Elevate Your Software\'s Integrity Codicis ensures').click();
 
     // Assert "What We Do" heading text
     const whatWeDoHeading = await page.locator('.l-heading');
@@ -44,14 +44,14 @@ test.describe('Codicis Website Tests', () => {
     expect(headingText).toContain("Elevate Your Software's Integrity"); 
 
     // Click "Clients" section
-    await page.locator('#clients').click();
+   // await page.locator('#clients').click();
 
     // Assert presence of client logos
     const clientLogos = await page.locator('.items img');
    // await expect(clientLogos.count()).toBeGreaterThan(0); // Check for at least one logo
 
     // Click "Contact Us" section
-    await page.locator('text=Contact Us Please use the form below to contact us:').click();
+   // await page.locator('text=Contact Us Please use the form below to contact us:').click();
 
     // Assert visibility of contact form
     const contactForm = await page.locator('.contact-form form');

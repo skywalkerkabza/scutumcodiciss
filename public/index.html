@@ -78,14 +78,13 @@
       <div><img src="./logo/grey_ag_logo-1.svg" alt="Client"></div>
       <div><img src="./logo/sanlam-logo.png" alt="Client"></div>
     </div>
-
   </section>
 
   <section id="contacts">
     <div class="contact-form bg-primary p-2">
       <h2 class="m-heading">Contact Us</h2>
       <p>Please use the form below to contact us:</p>
-      <form method="POST" data-netlify="true" name="contact">
+      <form method="POST" action="/send-email" name="contact">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" name="name" id="name" placeholder="Enter Your Name">
@@ -107,23 +106,27 @@
     </div>
     <div class="map"></div>
   </section>
+  
   <footer class="main-footer bg-dark text-center py-1">
     <div class="container">
-      <p>&copy; 2024 Codicis Pty(LTD). All Rights Reserved</p>
+      <div class="column">
+        <a class="footer_title">GET IN TOUCH</a>
+        <a title="Address"><i class="fa fa-map-marker"></i> V&A Marina, Dock Rd, Victoria & Alfred Waterfront, Cape Town, 8001</a>
+        <a href="emailto:" title="Email"><i class="fa fa-envelope"></i> info@codicis.co.za</a>
+        <a href="tel:" title="Contact"><i class="fa fa-phone"></i> +27(012)-408-7600</a>
+      </div>
+    
+      <div class="sub-footer">
+        &copy; 2024 Codicis Pty(LTD). All Rights Reserved
+      </div>
     </div>
   </footer>
 
   <!-- JQUERY-->
-
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 
   <!-- Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-  async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=&callback=initMap" async defer></script>
 </body>
 </html>
