@@ -48,6 +48,11 @@ p {
   color: #93cb52; 
 }
 
+.logo-image {
+  width: 50px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .l-heading {
   font-size: 4rem;
   padding: 0 1.2rem;
